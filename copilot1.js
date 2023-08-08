@@ -29,3 +29,14 @@ for (var i = 0; i < images.length; i++) {
         image.style.border = "5px solid red";
     }
 }
+
+// bütün resimlerin alternatif metinlerini bulun
+//ve onlara kırmızı çerçeve verin
+var images = document.getElementsByTagName("img");
+for (var i = 0; i < images.length; i++) {
+    var image = images[i];
+    if (image.alt == "") {
+        image.style.border = "5px solid red";
+    }
+}
+
