@@ -10,6 +10,16 @@ using Newtonsoft.Json;
 
 namespace Company.Function
 {
+    //create a class to hold to a productID string, and orderID string and a quantity int
+    public class Order
+    {
+        public string ProductID { get; set; }
+        public string OrderID { get; set; }
+        public int Quantity { get; set; }
+        // convert request body into a string
+        string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+    }
+   
     public static class HttpTrigger1
     {
         [FunctionName("HttpTrigger1")]

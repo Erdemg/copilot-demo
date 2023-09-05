@@ -22,3 +22,7 @@ $vm = New-AzureRmVMConfig -VMName $vmName -VMSize Standard_DS2_v2 |
 
 
 
+## azure da disk ekle
+# Create a new disk
+$disk = New-AzureRmDisk -DiskName $diskName -Disk (New-AzureRmDiskConfig -AccountType $diskSku -Location $location -CreateOption Empty -DiskSizeGB $diskSize) -ResourceGroupName $resourceGroup
+        

@@ -1,0 +1,4 @@
+# kubernetes ingress with ssl termination and basic auth
+apiVersion: extensions/v1beta1
+kind: Ingress
+        
